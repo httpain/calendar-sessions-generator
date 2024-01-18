@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version "1.9.21"
     kotlin("kapt") version "1.9.21"
+    id("application")
 }
 
 group = "com.httpain"
@@ -29,3 +30,8 @@ kapt {
         arg("project", "${project.group}/${project.name}")
     }
 }
+
+application {
+    mainClass = "com.httpain.sessions.CalendarGeneratorCommandKt"
+}
+
